@@ -3,7 +3,7 @@
 **individuals who did not use opioid during pregnancy 
 **
 *Change working pathway to the dataset folder*
-cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/SAS_data/"
+
 *The finaldataset.sas7bdat is stored Dropbox (Brown)\Lucy_thesis\SAS_data
 import sas finaldataset.sas7bdat
 *Set Weight 
@@ -39,7 +39,7 @@ svy, subpop(if insample==1 & postPartumTreat1Month==1):  tabulate PregPR insuran
 
 
 ***output table ***
-  cap cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/Manuscript/Final submission to Pregnancy/Major Revision/Tables and Figures"
+ 
   putexcel set OpioidNaive.xlsx, modify 
 
 svy, subpop(insampleOpioidNaive): logistic postPartumTreat1Month i.pregDepression i.ageGroup i.raceEthn i.education i.insurance3 i.cesarean i.preterm 
