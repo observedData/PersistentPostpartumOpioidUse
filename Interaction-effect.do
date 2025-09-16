@@ -1,8 +1,7 @@
 *code used to generate dataset for additional analysis*
 *Interaction effect of cesarean and prenatal depression*
-*Change working pathway to the dataset folder*
-cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/SAS_data/"
-*The finaldataset.sas7bdat is stored Dropbox (Brown)\Lucy_thesis\SAS_data
+
+
 import sas finaldataset.sas7bdat
 *Set Weight 
 svyset _n [pweight= WTANAL], strata(sud_nest) fpc(totcnt)
@@ -10,7 +9,7 @@ svyset _n [pweight= WTANAL], strata(sud_nest) fpc(totcnt)
  gen intCesarean= cesarean*pregDepression 
 
 ***output table ***
-cap cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/Manuscript/Final submission to Pregnancy/Major Revision/Tables and Figures"
+
 putexcel set InteractionCesarean.xlsx, modify 
 
 **
