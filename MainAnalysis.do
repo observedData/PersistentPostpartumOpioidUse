@@ -346,7 +346,7 @@ matrix define a=e(obs)
  ***Calculate marginal effects ****************
  
  ***output table ***
-  cap cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Tables and Figures"
+
   putexcel set Robust_Analysis.xlsx, modify 
 
 ****Unadjusted any postpartum opioid use models ******
@@ -913,3 +913,4 @@ local imAdjust13=" `m_diff13' (`lci_diff13', `uci_diff13')"
  
 
  
+
