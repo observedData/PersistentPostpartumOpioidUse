@@ -1,7 +1,4 @@
 *Change working pathway to the dataset folder*
-*cd "C:\Users\lzheng33\Dropbox (Brown)\Lucy_thesis\SAS_data"
-cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/SAS_data/"
-*The finalrobustdataset.sas7bdat is stored Dropbox (Brown)\Lucy_thesis\SAS_data
 import sas finalDataset.sas7bdat
 *Set Weight 
 svyset _n [pweight= WTANAL], strata(sud_nest) fpc(totcnt)
@@ -22,7 +19,7 @@ svy, subpop(if insample==1):  tabulate insurance eightPostPR, row percent ci obs
  svy, subpop(if insample==1): tabulate eightPostPR, ci obs percent 
 
  ***output table ***
-cap cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/Manuscript/Final submission to Pregnancy/Major Revision/Tables and Figures"
+
   putexcel set eight_week.xlsx, modify 
   
  **no data on insurance category 4 so we have to recode insurance 
