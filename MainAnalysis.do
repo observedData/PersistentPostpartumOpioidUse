@@ -1,7 +1,5 @@
 *Change working pathway to the dataset folder*
-*cd "C:\Users\lzheng33\Dropbox (Brown)\Lucy_thesis\SAS_data"
-cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/SAS_data/"
-*The finalrobustdataset.sas7bdat is stored Dropbox (Brown)\Lucy_thesis\SAS_data
+
 import sas finalDataset.sas7bdat
 *Set Weight 
 svyset _n [pweight= WTANAL], strata(sud_nest) fpc(totcnt)
@@ -17,7 +15,7 @@ svy, subpop(if insample==1): tabulate postLength, percent
 
 ***Descriptive statistics CI is calculated based on logit transform
 **store output 
-cap cd "/Users/linqing/Library/CloudStorage/Dropbox-Personal/Lucy's thesis/Descriptive statistics/Descriptive stats comparison"
+
 putexcel set statades.xlsx, modify 
  
 *used package  ssc install estout
@@ -913,4 +911,5 @@ local imAdjust13=" `m_diff13' (`lci_diff13', `uci_diff13')"
  *********
  
  
+
  
