@@ -1,7 +1,5 @@
 
-libname x 'C:\Users\lzheng33\OneDrive - Brown University\Documents\SAS\Project\Steenland_2019';
-libname y 'C:\Users\lzheng33\Dropbox (Brown)\Lucy_thesis\SAS_data';
-libname library 'C:\Users\lzheng33\OneDrive - Brown University\Documents\SAS\Project\SteenlandOCBS';
+
 
 /*merge two dataset together*/
 Data data1;
@@ -210,6 +208,7 @@ weight wtanal;
 tables PostPR;
 where insample=1;
 run;
+
 
 
 
